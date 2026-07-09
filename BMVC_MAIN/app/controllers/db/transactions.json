@@ -1,0 +1,7 @@
+[
+  {"id":"b001","username":"admin","tipo":"receita","categoria":"Salario","descricao":"Salario Janeiro","valor":5000.0,"data":"2025-01-05"},
+  {"id":"b002","username":"admin","tipo":"despesa","categoria":"Moradia","descricao":"Aluguel","valor":1200.0,"data":"2025-01-10"},
+  {"id":"b003","username":"admin","tipo":"despesa","categoria":"Alimentacao","descricao":"Supermercado","valor":650.0,"data":"2025-01-15"},
+  {"id":"b004","username":"admin","tipo":"receita","categoria":"Freelance","descricao":"Projeto Web","valor":1500.0,"data":"2025-01-20"},
+  {"id":"b005","username":"admin","tipo":"despesa","categoria":"Lazer","descricao":"Cinema e restaurante","valor":320.0,"data":"2025-01-25"}
+]

@@ -1,0 +1,106 @@
+/* FinanceGest - style.css (base global) */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --primary:      #4f46e5;
+  --primary-dk:   #3730a3;
+  --primary-lt:   #e0e7ff;
+  --success:      #059669;
+  --danger:       #dc2626;
+  --bg:           #f0f4f8;
+  --sidebar:      #1e293b;
+  --sidebar-text: #94a3b8;
+  --sidebar-hov:  #334155;
+  --card:         #ffffff;
+  --text-1:       #1e293b;
+  --text-2:       #64748b;
+  --border:       #e2e8f0;
+  --shadow:       0 1px 3px rgba(0,0,0,.08);
+  --shadow-md:    0 4px 12px rgba(0,0,0,.1);
+  --radius:       10px;
+  --radius-sm:    6px;
+  --sidebar-w:    220px;
+}
+
+html { font-family: 'Segoe UI', system-ui, sans-serif; font-size: 15px; color: var(--text-1); }
+a    { color: var(--primary); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* --- Botoes --- */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: .5rem 1rem; border-radius: var(--radius-sm);
+  font-size: .875rem; font-weight: 600; cursor: pointer;
+  border: 1.5px solid transparent; transition: .15s;
+  text-decoration: none; white-space: nowrap;
+}
+.btn:hover { text-decoration: none; }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-dk); }
+.btn-outline { background: transparent; color: var(--primary); border-color: var(--primary); }
+.btn-outline:hover { background: var(--primary-lt); }
+.btn-full { width: 100%; justify-content: center; padding: .7rem; font-size: 1rem; }
+.btn-sm   { padding: .3rem .75rem; font-size: .8rem; }
+
+/* --- Alertas --- */
+.alert { padding: .75rem 1rem; border-radius: var(--radius-sm); font-size: .875rem; margin-bottom: 1rem; }
+.alert-danger  { background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+.alert-success { background: #d1fae5; color: #065f46; border: 1px solid #6ee7b7; }
+
+/* --- Formularios --- */
+.form-group { display: flex; flex-direction: column; gap: .3rem; }
+.form-group label { font-size: .78rem; font-weight: 700; color: var(--text-2); text-transform: uppercase; letter-spacing: .04em; }
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: .55rem .75rem; border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); font-size: .9rem;
+  background: #fff; color: var(--text-1); outline: none; transition: border-color .15s;
+}
+.form-group input:focus,
+.form-group select:focus { border-color: var(--primary); }
+
+/* --- Cores financeiras --- */
+.col-receita { color: var(--success); font-weight: 700; }
+.col-despesa { color: var(--danger);  font-weight: 700; }
+.val-pos     { color: var(--success); }
+.val-neg     { color: var(--danger); }
+
+/* --- Badges --- */
+.badge { display: inline-block; padding: .2rem .55rem; border-radius: 99px; font-size: .75rem; font-weight: 700; }
+.badge-receita { background: #d1fae5; color: #065f46; }
+.badge-despesa { background: #fee2e2; color: #991b1b; }
+.badge-cat     { background: var(--primary-lt); color: var(--primary); }
+
+/* --- Tabelas --- */
+.table-wrap { overflow-x: auto; }
+.data-table { width: 100%; border-collapse: collapse; font-size: .875rem; }
+.data-table th {
+  text-align: left; padding: .6rem 1rem;
+  background: #f8fafc; color: var(--text-2);
+  font-size: .72rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .05em; border-bottom: 1.5px solid var(--border);
+}
+.data-table td { padding: .7rem 1rem; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.data-table tbody tr:hover { background: #f8fafc; }
+.data-table tbody tr:last-child td { border-bottom: none; }
+.actions-cell { white-space: nowrap; text-align: right; }
+
+/* --- Botoes icone (editar/excluir) --- */
+.btn-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: .3rem .5rem; border-radius: 6px; border: none;
+  cursor: pointer; font-size: .9rem; background: transparent;
+  transition: .15s; text-decoration: none;
+}
+.btn-edit   { color: var(--primary); }
+.btn-edit:hover   { background: var(--primary-lt); }
+.btn-delete { color: var(--danger); }
+.btn-delete:hover { background: #fee2e2; }
+
+/* --- Empty state --- */
+.empty-state { display: flex; flex-direction: column; align-items: center; gap: .75rem; padding: 3rem 1rem; color: var(--text-2); text-align: center; }
+
+/* --- Table count --- */
+.table-count { font-size: .8rem; color: var(--text-2); margin-top: .5rem; padding: 0 .5rem; }
